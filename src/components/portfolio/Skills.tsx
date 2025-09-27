@@ -56,7 +56,11 @@ export const Skills = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all duration-300 group">
+            <Card 
+              key={index} 
+              className="bg-gradient-card border-border/50 shadow-soft hover:shadow-medium transition-all duration-300 group hover-lift animate-fade-in stagger-animation" 
+              style={{ '--stagger': index } as any}
+            >
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${category.gradient} shadow-soft`}>

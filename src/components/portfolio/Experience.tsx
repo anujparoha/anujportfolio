@@ -48,7 +48,11 @@ export const Experience = () => {
         
         <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-medium hover:shadow-strong transition-all duration-300 overflow-hidden group">
+            <Card 
+              key={index} 
+              className="bg-gradient-card border-border/50 shadow-medium hover:shadow-strong transition-all duration-300 overflow-hidden group hover-lift animate-fade-in stagger-animation" 
+              style={{ '--stagger': index } as any}
+            >
               <CardHeader className="pb-4">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>

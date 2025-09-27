@@ -63,7 +63,11 @@ export const Projects = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-medium hover:shadow-strong transition-all duration-300 group overflow-hidden">
+            <Card 
+              key={index} 
+              className="bg-gradient-card border-border/50 shadow-medium hover:shadow-strong transition-all duration-300 group overflow-hidden hover-lift animate-fade-in stagger-animation" 
+              style={{ '--stagger': index } as any}
+            >
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between">
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${project.gradient} shadow-soft`}>
