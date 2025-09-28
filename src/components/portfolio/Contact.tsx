@@ -25,25 +25,25 @@ export const Contact = () => {
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/anuj-paroha22/",
       gradient: "from-blue-600 to-blue-800"
     },
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "#",
+      href: "https://github.com/anujparoha",
       gradient: "from-gray-600 to-gray-800"
     },
     {
       icon: <Code className="h-5 w-5" />,
       label: "LeetCode",
-      href: "#",
+      href: "https://leetcode.com/u/anuj_paroha_22/",
       gradient: "from-orange-500 to-yellow-600"
     },
     {
       icon: <Code className="h-5 w-5" />,
       label: "CodeChef",
-      href: "#",
+      href: "https://www.codechef.com/users/anuj_paroha22",
       gradient: "from-brown-500 to-amber-600"
     }
   ];
@@ -136,30 +136,36 @@ export const Contact = () => {
               </div>
             </CardContent>
           </Card>
-          
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <Card className="bg-gradient-secondary border-border/50 shadow-medium">
-              <CardContent className="p-8">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-lg bg-gradient-primary shadow-soft">
-                    <MapPin className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  Based in India, Available Globally
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Whether you're looking for a full-time developer, project collaboration, 
-                  or just want to discuss technology, I'm always excited to connect with fellow developers and innovators.
-                </p>
-                <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Start a Conversation
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+<div className="text-center mt-12">
+    <Card className="bg-gradient-secondary border-border/50 shadow-medium">
+        <CardContent className="p-8">
+            {/* ... other content ... */}
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+                Based in India, Available Globally
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+                Whether you're looking for a full-time developer, project collaboration, 
+                or just want to discuss technology, I'm always excited to connect with fellow developers and innovators.
+            </p>
+
+            <Button 
+                size="lg" 
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                asChild // Use asChild if your Button component supports rendering an anchor tag
+            >
+                <a 
+                    href="mailto:YOUR_EMAIL_ADDRESS?subject=Conversation%20about%20a%20Project&body=Hello%2C%20I%20saw%20your%20portfolio%20and%20wanted%20to%20start%20a%20conversation%20about..."
+                    target="_blank" // Optional: Opens the email client in a new tab/window
+                    rel="noopener noreferrer"
+                >
+                    <Mail className="mr-2 h-4 w-4" />
+                    Start a Conversation
+                </a>
+            </Button>
+
+        </CardContent>
+    </Card>
+</div> 
         </div>
       </div>
     </section>
